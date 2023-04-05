@@ -1,15 +1,11 @@
-import { useEffect } from "react";
-
 export default function ErrorPage({ errorText }) {
   // uncomment me to see how a long-running getInitialProps affects
   // client-side javascript execution
-  // useEffect(() => console.log("client-side effect run"), []);
+  // React.useEffect(() => console.log("client-side effect run"), []);
   return <>{errorText}</>;
 }
 
 ErrorPage.getInitialProps = async (ctx) => {
-  console.log(ctx.req?.url, ctx.err);
-
   // uncomment me to see how a long-running getInitialProps affects
   // client-side javascript execution
   // if (typeof window !== "undefined") {
